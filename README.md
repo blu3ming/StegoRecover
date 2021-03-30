@@ -11,3 +11,5 @@ steg-file: The fie with hidden info that requires a password to be extracted.
 wordlist_file: Path to a wordlist of possible passwords.
 
 It uses the command "steghide extract -sf STEG_FILE -p PASSWORD" to try each password into the file. So, when it founds the right password, it automatically extracts the hidden info to the file "message.txt".
+
+![alt text](https://github.com/blu3ming/StegoRecover/blob/main/images/stegorecover.png?raw=true)
