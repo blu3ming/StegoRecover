@@ -37,6 +37,7 @@ if len(sys.argv) != 3:
 	log.info("Usage: python " + str(sys.argv[0]) + " steg_file wordlist")
 	print("\n")
 	log.failure("Exiting...")
+	sys.exit(1)
 
 else:
 	wordlist = open(str(sys.argv[2]), "r")
@@ -67,3 +68,4 @@ else:
 	print("\n")
 	log.info("Password not found in wordlist file... Exiting...")
 	wordlist.close()
+	sys.exit(1)
