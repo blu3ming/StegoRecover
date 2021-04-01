@@ -39,11 +39,6 @@ if len(sys.argv) != 3:
 	log.failure("Exiting...")
 
 else:
-	if os.path.exists("message.txt"):
-		log.info("Deleting existing message.txt file...")
-		time.sleep(2)
-		os.remove("message.txt")
-
 	wordlist = open(str(sys.argv[2]), "r")
 	line_count = 0
 	for line in wordlist:
@@ -64,7 +59,7 @@ else:
 				p1.success("Password found!")
 				p2.success("%s" % password)
 				print("\n")
-				log.info("Wrote extracted data to 'message.txt'")
+				log.info("%s" % out)
 				wordlist.close()
 				sys.exit(0)
 
