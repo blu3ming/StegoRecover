@@ -40,12 +40,7 @@ if len(sys.argv) != 3:
 	sys.exit(1)
 
 else:
-	wordlist = open(str(sys.argv[2]), "r")
-	line_count = 0
-	for line in wordlist:
-		if line != "\n":
-			line_count += 1
-	wordlist.close()
+	line_count = sum(1 for line in open(sys.argv[2]))
 	log.info("%d Passwords loaded" % line_count)
 	time.sleep(2)
 
